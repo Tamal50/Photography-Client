@@ -1,0 +1,10 @@
+@import './Global.scss';
+.slidbar{
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    @include mobile{
+        height: auto;
+    }
+}

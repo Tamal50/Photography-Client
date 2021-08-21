@@ -1,0 +1,9 @@
+.App{
+    height: 100%;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    scrollbar-width: none; //firefox only
+        &::-webkit-scrollbar{
+            display: none;
+        }
+}
