@@ -5,7 +5,7 @@ import Layout from '../../Layout';
 const ProductList = () => {
     const [product, setProduct] = useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000/products')
+        fetch('https://picsmania0.herokuapp.com/products')
         .then(res => res.json())
         .then(data => setProduct(data));
     })
@@ -15,7 +15,7 @@ const ProductList = () => {
     
 
     const handleDelete = (id) => {
-       fetch(`http://localhost:5000/delete/${id}`, {
+       fetch(`https://picsmania0.herokuapp.com/delete/${id}`, {
            method: 'DELETE'
        })
        .then(res => res.json())

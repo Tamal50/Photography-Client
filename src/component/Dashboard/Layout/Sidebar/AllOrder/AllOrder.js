@@ -10,7 +10,7 @@ const AllOrder = () => {
     const [oder , setOder] = useState([])
     
     useEffect(()=>{
-        fetch('http://localhost:5000/adminOderDetails')
+        fetch('https://picsmania0.herokuapp.com/adminOderDetails')
         .then(res => res.json())
         .then(data => setOder(data));
     }, [])
@@ -19,7 +19,7 @@ const AllOrder = () => {
         const status = document.getElementById('status').value;
         const product = {id: id, status: status}
 
-        fetch(`http://localhost:5000/update/${id}`, {
+        fetch(`https://picsmania0.herokuapp.com/update/${id}`, {
             method: 'PATCH',
             headers: { 'Content-Type': 'application/json'},
             body: JSON.stringify(product)

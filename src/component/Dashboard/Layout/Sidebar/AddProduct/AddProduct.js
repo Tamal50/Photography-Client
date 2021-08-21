@@ -17,7 +17,7 @@ const AddProduct = () => {
       }
       const handleAddProduct = (e) => {
         e.preventDefault()
-           fetch('http://localhost:5000/addProduct', {
+           fetch('https://picsmania0.herokuapp.com/addProduct', {
             method: 'POST',
             headers: {
               "Content-Type": 'application/json'

@@ -8,7 +8,7 @@ const ProductPage = () => {
     const {_id} = useParams();
     const [orderProduct, setOrderProduct] = useState([])
     useEffect(()=>{
-        fetch(`http://localhost:5000/product/${_id}`)
+        fetch(`https://picsmania0.herokuapp.com/product/${_id}`)
         .then(res => res.json())
         .then(data => setOrderProduct(data))
       }, [])

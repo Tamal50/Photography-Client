@@ -10,7 +10,7 @@ const OrderPage = (props) => {
     const {_id} = useParams();
     const [Product, setProduct] = useState([])
     useEffect(()=>{
-      fetch(`http://localhost:5000/product/${_id}`)
+      fetch(`https://picsmania0.herokuapp.com/product/${_id}`)
       .then(res => res.json())
       .then(data => setProduct(data))
     })
@@ -18,7 +18,7 @@ const OrderPage = (props) => {
    const onSubmit = data => {
     
     const oderDetails = {email: logInUser.email , product: Product , shipmentInfo: data , oderTime: new Date(), status: "pending"}
-    fetch('http://localhost:5000/order', {
+    fetch('https://picsmania0.herokuapp.com/order', {
         method: 'POST',
         headers: {
           "Content-Type": 'application/json'

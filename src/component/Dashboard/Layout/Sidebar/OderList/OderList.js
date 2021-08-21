@@ -7,7 +7,7 @@ const OderList = () => {
   const [logInUser,setLogInUser] =useContext(UserContext);
   const [oder , setOder] = useState([])
   useEffect(()=>{
-      fetch('http://localhost:5000/oderDetails?email='+logInUser.email )
+      fetch('https://picsmania0.herokuapp.com/oderDetails?email='+logInUser.email )
       .then(res => res.json())
       .then(data => setOder(data));
   }, [])
